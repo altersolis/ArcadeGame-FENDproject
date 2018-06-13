@@ -36,11 +36,9 @@ Enemy.prototype.update = function(dt) {
     };
 };
 
-
         // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-
 };
 
         // Now write your own player class
@@ -55,16 +53,13 @@ var Player = function(x,y) {
     this.player = 'images/char-boy.png';
 };
 
-
 Player.prototype.update = function(dt) {
 
 };
 
-
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);    
 };
-
 
 Player.prototype.handleInput = function(keyPress) {
     if (keyPress === 'left' && this.x > 0) {
@@ -87,7 +82,6 @@ Player.prototype.handleInput = function(keyPress) {
     };
 };
 
-
         // Now instantiate your objects.
         // Place all enemy objects in an array called allEnemies
         //-----------------------SE FOSSE ES5, seria seguinte
@@ -100,8 +94,9 @@ enemyLocation.forEach(function(locationY) {
 });
 
 
-        // Place the player object in a variable called player
 //-----------------------SE FOSSE ES5, seria seguinte
+
+        // Place the player object in a variable called player
 var player = new Player(202, 405);
 
 
@@ -117,4 +112,3 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-
